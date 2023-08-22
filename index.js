@@ -121,4 +121,5 @@ for(let index = 0; index < netArray.length; index++){
   netChangeSum += netArray[index];
 }
 
-console.log(netChangeSum)
+average = Math.round((netChangeSum / 86) * 100) /100;
+console.log(average)
