@@ -104,8 +104,15 @@ for(let index = 0; index < finances.length; index++){
     for(let index2 = 0; index2 < finances[index].length; index2++) {
       
       if(typeof finances[index][index2] !== 'string'){
-        total += finances[index][index2]
-        console.log(total);
+        total += finances[index][index2];
+        change = finances[index][index2] - net;
+        net = finances[index][index2];
+        netArray.push(change);
+        console.log(`total: ${total}`);
+        console.log(`change: ${change}`);
+        console.log(`net: ${net}`);
+        console.log(`netArray ${netArray}`);
+
       }
     }
 }
